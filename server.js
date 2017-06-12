@@ -50,6 +50,12 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    projectMsg: 'Take a look at my projects',
+    title: 'Project page'
+  })
+})
 app.get('/bad', (req, res) => {
   res.send({
     error: 'Error! 404 Bad request!'
